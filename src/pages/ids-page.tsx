@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { ids as seedIds, type IdItem } from "../lib/ids";
-import { CopyCheck, Copy, Check } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 
 const PAGE_SIZE = 10;
 
