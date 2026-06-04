@@ -16,7 +16,15 @@ const codeFields = [
   },
 ] as const;
 
-function ShadowBox({ shadow }: { shadow: Shadow }) {
+function ShadowBox({ 
+  shadow, 
+  selected, 
+  onOpen 
+}: { 
+  shadow: Shadow; 
+  selected: boolean; 
+  onOpen: () => void 
+}) {
   const [copied, setCopied] = useState<string | null>(null);
   const copyToClipboard = async (value: string, key: string) => {
     await navigator.clipboard.writeText(value);
@@ -27,10 +35,23 @@ function ShadowBox({ shadow }: { shadow: Shadow }) {
   return (
     <div
       className={cn(
-        "size-24 sm:size-32 xl:size-48 flex flex-col items-stretch justify-center gap-1 bg-white",
+        "size-24 sm:size-32 xl:size-48 flex flex-col items-stretch justify-center gap-1 bg-white relative",
         shadow.tailwind,
       )}
     >
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          onOpen();
+        }}
+        className={cn(
+          "absolute top-1.5 right-2 text-xs sm:text-xs transition-colors cursor-pointer z-10",
+          selected ? "text-indigo-600 font-medium" : "text-zinc-400 hover:text-zinc-600"
+        )}
+      >
+        {selected ? "Opened" : "Open"}
+      </button>
+
       <div className="flex flex-col gap-2 px-1 items-center">
         {codeFields.map((field) => {
           const value = shadow[field.key];
@@ -60,7 +81,7 @@ function ShadowBox({ shadow }: { shadow: Shadow }) {
       <div className="flex flex-col items-center justify-center gap-0.5 pt-1 text-center">
         <span className="font-medium text-zinc-700">Box - {shadow.id}</span>
         {shadow.by && (
-          <span className="text-xs text-indigo-500">by {shadow.by}</span>
+          <span className="text-xs text-emerald-600">by {shadow.by}</span>
         )}
       </div>
 
