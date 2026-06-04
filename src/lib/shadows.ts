@@ -157,4 +157,50 @@ export const shadows: Shadow[] = [
     tailwind:
       "shadow-[0px_8px_12px_0px_rgba(25,25,25,.027),0px_2px_6px_0px_rgba(25,25,25,.027),0px_0px_0px_1px_rgba(42,28,0,.07)]",
   },
+  {
+    id: "7nyn",
+    type: "box",
+    by: "Shadcn",
+    css: "box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;",
+    tailwind: "shadow-[0_1px_3px_0_#0000001a,0_1px_2px_-1px_#0000001a]",
+  },
+  {
+    id: "hixv",
+    type: "box",
+    by: "vercel",
+    css: "box-shadow: 0 0 0 1px #00000014, 0px 2px 2px #0000000a, 0px 8px 16px -4px #0000000a, 0 0 0 1px hsla(0, 0%, 98%, 1);",
+    tailwind:
+      "shadow-[0_0_0_1px_#00000014,0px_2px_2px_#0000000a,0px_8px_16px_-4px_#0000000a,0_0_0_1px_hsla(0,0%,98%,1)]",
+  },
+  {
+    id: "4vc0",
+    type: "box",
+    by: "Shadcn",
+    css: "box-shadow: 0 1px 2px 0 #0000000d;",
+    tailwind: "shadow-[0_1px_2px_0_#0000000d]",
+  },
+  {
+    id: "irvl",
+    type: "box",
+    by: "React Flow",
+    css: "box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);",
+    tailwind:
+      "shadow-[0_4px_6px_-1px_rgba(0,0,0,.1),0_2px_4px_-2px_rgba(0,0,0,.1)]",
+  },
+  {
+    id: "fflk",
+    type: "box",
+    by: "Google Cloud",
+    css: "box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);",
+    tailwind:
+      "shadow-[0_1px_2px_0_rgba(60,64,67,0.3),0_2px_6px_2px_rgba(60,64,67,0.15)]",
+  },
+  {
+    id: "x9dq",
+    type: "box",
+    by: "Google Cloud",
+    css: "box-shadow: 0px 1px 3px 0px rgba(60,64,67,0.3), 0px 4px 8px 3px rgba(60,64,67,0.15);",
+    tailwind:
+      "shadow-[0px_1px_3px_0px_rgba(60,64,67,0.3),0px_4px_8px_3px_rgba(60,64,67,0.15)]",
+  },
 ];

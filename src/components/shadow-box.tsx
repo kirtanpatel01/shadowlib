@@ -81,7 +81,7 @@ function ShadowBox({
       <div className="flex flex-col items-center justify-center gap-0.5 pt-1 text-center">
         <span className="font-medium text-zinc-700">Box - {shadow.id}</span>
         {shadow.by && (
-          <span className="text-xs text-emerald-600">by {shadow.by}</span>
+          <span className="text-xs text-emerald-600 capitalize">by {shadow.by}</span>
         )}
       </div>
 
